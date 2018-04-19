@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "Direct List Maker",
+  "short_name": "Direct List Maker",
+  "description": "Allows entering prices directly",
+  "options_page": "options.html",  
+  "version": "11.0",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+	  
+      "js": ["jquery-3.2.1.min.js", "jquery-1.12.4.js","sayuri.js", "searchByLot.js"]
+		  
+    }
+  ],
+  "browser_action": {
+	"default_popup": "popup.html",
+    "default_icon": "images/bidicon.png"
+	
+  },
+	
+	"content_security_policy": "script-src 'self' https://inventivesolutionste.ipage.com; object-src 'self'",
+  "permissions": [ "tabs", "activeTab", "*://*/*", "https://*.iauc.co.jp/*", "http://*.asnet2.com/*",  "*://*.ipage.com/*", "cookies", "storage" ],
+  "externally_connectable": {
+  "matches": ["*://*.iauc.co.jp/*", "https://sayuri.co.jp/", "http://oliac.com/", "*://*.ipage.com/*"]
+  }
+}

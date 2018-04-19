@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "CARS FROM AUCTIONS",
+  "short_name": "Spreadsheet List Maker",
+  "description": "It will structure your data to copy paste into spreadsheet",
+  "version": "5.1",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["jquery-3.2.1.min.js", "honda.js", "iauc.js", "ju.js", "laa.js", "mirive.js", "orix.js", "taacaa.js", "zero.js","lum.js","uss.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "images/csv.png",
+	"default_popup":"popup.html"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}

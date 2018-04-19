@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "List Style Kenya list maker",
+  "short_name": "Kenya list maker",
+  "description": "Easily select cars for Kenya",
+  "version": "0.1",
+  "background": {
+    "scripts": ["jquery-3.2.1.slim.js", "background.js"]
+	
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["jquery-3.2.1.slim.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "Car-List-512.png"
+	 //"default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}

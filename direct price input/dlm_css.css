@@ -1,0 +1,143 @@
+.logo-dlm{
+
+    background: url(images/logo_03.png) no-repeat;
+    width: 253px;
+    height: 120px;
+    display: block;
+
+}
+div#lastsync {
+    color: floralwhite;
+    width: 250px;
+    height: 26px;
+    background-color: chocolate;
+    border-radius: 10px;
+    padding: 3px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#dlmex{
+    background: url(images/bidicon.png) 7px  no-repeat;
+    background-size:16px 16px;
+}
+#iauclm{
+    background: url(images/1.png)  no-repeat;
+    background-size:24px 24px;
+}.janlogo {
+}
+div#sync {
+    float: left;
+    position: absolute;
+    left: 40%;
+    top: 65px;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border-radius: 50px;
+    box-shadow: rgb(39, 255, 0) 0px 0px 5px 5px;
+    text-align: center;
+    padding-top: 38px;
+    font-size: x-large;
+    border-color: orange;
+    cursor: pointer;
+    transition: all 0.3s;
+    transition-timing-function: cubic-bezier(0.50,0,1,1);
+    transform-origin:center;
+}
+label {
+    font-size: x-small;
+    margin-bottom: -5px;
+
+}
+#cont{
+    float: right;
+    margin-left: 10px;
+    color: antiquewhite;
+    padding-top: 5px;
+}
+#status{
+    color: chartreuse;
+    float: right;
+}
+.switch {
+    top: 1px;
+
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 18px;
+}
+span.vertex {
+    font-size: 10px;
+}
+.switch input {display:none;}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #F00;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 1px;
+    bottom: 1px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: limegreen;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px limegreen;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 18px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+div#inner-content {
+    height: 650px;
+    overflow-y: scroll;
+}
+.constrain {
+    max-width: 1360px !important;
+}
+#mylots{
+
+}
+.row {
+    width: 1360px;
+    max-width: 100%;
+    min-width: 768px;
+    margin: 0 auto;
+}
+.ui-selectmenu-button.ui-button {
+    text-align: left;
+    white-space: nowrap;
+    width: 6em !important;
+}

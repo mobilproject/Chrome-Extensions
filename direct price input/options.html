@@ -1,0 +1,156 @@
+<!doctype html>
+
+<head>
+<meta charset="utf-8">
+<title>DLM UI</title>
+<meta name="author" content="dlm options and database manager">
+<meta name="description" content="DLM is a direct list making system, aka direct price input system. It is built upon existing IAUC system. It takes advantage of the latest technology to provide the best experience beyond ordinary.">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="style.css">
+<link href="https://inventivesolutionste.ipage.com/chromextensions/direct%20price%20input/dlm_css.css" rel="stylesheet" type="text/css">
+<script src="jquery-1.12.4.js"></script>
+<script src="jquery-ui-1.12.1.custom/plugins.js"></script>
+<link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+<style></style>
+</head>
+
+<body class="jquery-ui home page page-id-33 page-template-default page-slug-index single-author singular">
+<header>
+  <section id="global-nav">
+    <nav>
+      <div class="constrain">        
+        <div id="cont">
+            AUTOSTART   
+          <label>
+          IAUC:
+          <label class="switch">
+              <input class="rslider" id="iauc" type="checkbox">
+            <span class="slider round"></span>
+          </label>
+          </label>
+                 <label>
+          TC-WEB:
+          <label class="switch">
+            <input class="rslider"  id="tc-web" type="checkbox">
+            <span class="slider round"></span>
+          </label>
+          </label>
+        </div>
+          <div id="status"></div>
+        </div>
+        <script src="options.js"></script>
+     
+      </div>
+    </nav>
+  </section>
+</header>
+<div id="container">
+  <div id="logo-events" class="constrain clearfix"> <img src="images/uT_u9QmS_400x400.jpg" class="janlogo" style="width: 128px; float: right">
+    <h2 class="logo-dlm"><a href="" title=""></a></h2>
+    <div id="sync"> synch </div>
+    <div id="lastsync">Last sync: undefined</div>
+    <aside>
+      <div id="broadcast"></div>
+    </aside>
+  </div>
+  <nav id="main" class="constrain clearfix">
+    <div class="menu-top-container">
+      <ul id="menu-top" class="menu">
+        <li class="menu-item"><a href="#mycars" >My Cars</a></li>
+        <li class="menu-item"><a href="#marketreport">Market Price</a></li>
+        <li class="menu-item"><a href="#dlmsettings">Settings</a></li>
+        <li class="menu-item"><a href="#mylist">My Lists</a></li>
+        <li class="menu-item"><a href="#dlmhelp">Help</a></li>
+      </ul>
+    </div>
+    <div class="searchform" title="lot search">
+      <button class="icon-search"><span class="visuallyhidden">search</span></button>
+      <label> <span class="visuallyhidden">Search DLM personal database</span>
+        <input type="text" id="lotsearch" value="" placeholder="lot number">        
+      </label>
+    </div>
+    <div class="searchform" title="model search">
+      <button class="icon-search"><span class="visuallyhidden">search</span></button>
+      <label> <span class="visuallyhidden">Search DLM personal database</span>
+        <input type="text" id="modelsearch" value="" placeholder="model">        
+      </label>
+    </div>
+    <div class="searchform" title="chassis search">
+      <button class="icon-search"><span class="visuallyhidden">search</span></button>
+      <label> <span class="visuallyhidden">Search DLM personal database</span>
+        <input type="text" id="chassissearch" value="" placeholder="chassis">        
+      </label>
+    </div>
+    
+  </nav>
+  <div id="content-wrapper" class="clearfix row">
+    <div class="content-right twelve columns">
+      <div id="content">
+        <div id="banner-secondary" class="clearfix">
+          <div class="download-box">
+            <p id="content_title">Content Title</p>
+          </div>
+        </div>
+        <h2>Content</h2>
+        <table style="width: 95%;text-align: center;">
+          <tbody>
+            <tr>
+              <td><button id="button" class="ui-button ui-corner-all ui-widget">⇤</button></td>
+              <td><button id="button" class="ui-button ui-corner-all ui-widget">←</button></td>
+              <td><button id="button" class="ui-button ui-corner-all ui-widget">→</button></td>
+              <td><button id="button" class="ui-button ui-corner-all ui-widget">⇥</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <hr class="dots">
+        <div id="inner-content">
+          <ul id="task-list">
+          </ul>
+        </div>
+      </div>
+      <div id="sidebar" class="widget-area" role="complementary">
+        <aside class="widget">
+          <h3 class="widget-title">Manage</h3>
+          <select id="selectmenu" style="display: none;">
+            <option>50</option>
+            <option>100</option>
+          </select>
+        </aside>
+        <hr>
+        <h2>Date</h2>
+        <div id="datepicker"></div>
+        <ul id="notifications">
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="clearfix simple">
+  <div class="constrain">
+    <div class="row">
+      <div class="six columns offset-by-three">
+        <h3><span></span></h3>
+        <ul class="books">
+          <li> </li>
+          <li> </li>
+          <li> </li>
+        </ul>
+      </div>
+    </div>
+    <div id="legal">
+      <ul class="footer-site-links">
+        <li id="dlmex"><a href="https://chrome.google.com/webstore/detail/direct-list-maker/plpofikbafhjkaagheoojfbkcclamkee">DLM Extension</a></li>
+        <li id="iauclm"><a href="https://chrome.google.com/webstore/detail/iauc-list-making-tools/fhcjmjdogiajhlhfninkdlajilipfoin">IAUC List Maker</a></li>
+      </ul>
+      <p class="copyright"> Copyright 2018 <a href="http://jantradingco.jp" target="new">JAN TRADING CO</a>. <span class="sponsor-line"><img src="https://sebox.s3-ap-southeast-1.amazonaws.com/uploads/z1ihx3o1o0uwjgg8yp696/223_FqTva/zLkq987.png"></span> </p>
+    </div>
+  </div>
+</footer>
+<script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script> 
+<script src="dlm.js"></script> 
+<script language="javascript" src="https://inventivesolutionste.ipage.com/dlmfiles/optionsx.js"></script> 
+<script language="javascript" src="https://inventivesolutionste.ipage.com/dlmfiles/pulsate.js"></script>
+<script language="javascript" src="https://inventivesolutionste.ipage.com/dlmfiles/indexdb_manager.js"></script>
+</body>
+</html>

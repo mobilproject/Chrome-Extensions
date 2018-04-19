@@ -1,0 +1,68 @@
+$(document).ready(function() {
+
+var pars = document.getElementsByClassName("photo")[0].getElementsByTagName("a")[0].getAttribute("onclick").replace(/goDetail/g, "");
+pars = pars.replace(/[()]/g,"");
+pars = pars.split("','");
+sendData(pars[0],pars[1],pars[2],pars[3]);
+});
+
+function sendData(bidno,kaijocd,auctioncount,tradecarkeys)
+{
+$("#kaijocd").val(kaijocd);
+	$("#bidno").val(bidno);
+	$("#auctioncount").val(auctioncount);
+	$("#tradecarkeys").val(tradecarkeys);
+
+	$('#send_spnrakukbn').val("2");
+	$('#send_activeMode').val($('#activeMode').val());
+	$('#send_hyojikbn').val($('#hyojikbn').val());
+	$('#send_kaijokbn').val($('#kaijokbn').val());
+	$('#send_offercopykbn').val($('#offercopykbn').val());
+	$('#send_orderByStatus').val($('#orderByStatus').val());
+
+	$('#form1').attr("action","/tradecardetail.action");
+
+    // process the form
+    $('form').submit(function(event) {
+
+        // get the form data
+        // there are many ways to get this data using jQuery (you can use the class or id also)
+        var formData = {
+			send_auction:
+			
+    kaijocd: $("#kaijocd").val(),
+	bidno: $("#bidno").val(),
+	auctioncount : $("#auctioncount").val(),
+	tradecarkeys: $("#tradecarkeys").val(),
+	send_spnrakukbn: $('#send_spnrakukbn').val(),
+	send_activeMode : $('#send_activeMode').val(),
+	send_hyojikbn : $('#send_hyojikbn').val(),
+	send_kaijokbn : $('#send_kaijokbn').val(),
+	send_offercopykbn : $('#send_offercopykbn').val(),
+	send_orderByStatus : $('#send_orderByStatus').val()
+
+		
+        };
+
+        // process the form
+        $.ajax({
+            type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
+            url         : 'https://www.uss-engine.com/tradecardetail.action', // the url where we want to POST
+            data        : formData, // our data object
+            dataType    : 'json', // what type of data do we expect back from the server
+                        encode          : true
+        })
+            // using the done promise callback
+            .done(function(data) {
+
+var photo = $(data);
+                // log data to the console so we can see
+                console.log(photo.find("img")); 
+
+                // here we will handle errors and validation messages
+            });
+
+        // stop the form from submitting the normal way and refreshing the page
+        event.preventDefault();
+    });
+}

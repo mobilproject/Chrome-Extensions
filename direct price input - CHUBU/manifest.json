@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "DLM Chubu",
+  "short_name": "Direct List Maker custom version",
+  "description": "Allows entering prices directly",
+  "options_page": "options.html",
+  "version": "1.1",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+	  
+      "js": ["jquery-3.2.1.min.js", "jquery-1.12.4.js"]	 
+		  
+    }
+  ],
+  "browser_action": {
+    "default_icon": "images/bidicon.png"
+	
+  },
+	"content_security_policy": "script-src 'self' https://inventivesolutionste.ipage.com; object-src 'self'",
+  "permissions": [ "tabs", "activeTab", "*://*/*", "https://*.iauc.co.jp/*", "http://*.asnet2.com/*",  "*://*.ipage.com/*", "cookies", "storage" ],
+  "externally_connectable": {
+  "matches": ["*://*.iauc.co.jp/*", "https://sayuri.co.jp/", "http://oliac.com/", "*://*.ipage.com/*"]
+  }
+}

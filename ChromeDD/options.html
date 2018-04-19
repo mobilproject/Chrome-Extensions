@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>options</title>
+<script src="script/jquery-3.2.1.js"></script>
+<style type="text/css">
+label {
+	float: left;
+}
+#imported {
+	
+	font-size: medium;
+    background-color: darksalmon;
+    border-radius: 10px;
+    text-align: center;
+    height: 25px;
+    display: inline-table;
+    vertical-align: middle;
+    cursor: default;
+    float: left;
+    padding: 0px;
+    margin: 1px;
+    width: -webkit-fill-available;
+}
+th{
+	font-size: large;
+    text-align: center;
+	    background: blanchedalmond;
+}
+td{
+padding:5px;
+}
+#items {
+	float: left;
+	margin:5px;
+}
+#cont {
+
+	margin-top: 30px;
+	display: inline-table;
+	float:left;
+	color: black;
+	width: auto;
+	background-color: lavender;
+	cursor: pointer;
+}
+.button{
+    width: -webkit-fill-available;
+    height: 30px;
+    font-size: large;
+    border-radius: 15px;
+    background-color: goldenrod;
+    border-color: burlywood;
+	cursor:pointer;
+}
+#makers {
+
+	background-color: cadetblue;
+    border-color: cadetblue;
+	display: block;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	width: 200px;
+	height: 500px;
+	
+	margin-top: 0px;
+	
+    border-style: inset;
+	
+}
+
+::-webkit-input-placeholder {
+    color: azure;
+}
+
+#models{
+	
+    font-size: larger;
+	background-color: cadetblue;
+    border-color: cadetblue;
+	display: block;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	width: 200px;
+	height: 500px;
+	
+	margin-top: 0px;
+	
+	border-style: inset;
+	
+}
+
+#masker{
+    display: inline-block;
+    height: 700px;
+    overflow-x: scroll;
+    border-style: inset;
+}
+#list{
+	font-size: medium;
+	background-color: cadetblue;
+    border-color: cadetblue;
+	display: block;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	width: 200px;
+	height: 500px;
+	
+	margin-top: 0px;
+	
+    border-style: inset;
+	
+}
+#cta{
+	background-color: cadetblue;
+    width: 180px;
+    height: 500px;
+    border-style: inset;
+    font-size: x-large;
+    border-color: burlywood;
+    padding: 5px;
+}
+
+#status{
+    color: cyan;
+    font-size: large;
+    margin: 5px;
+}
+
+#lang {
+    float: right;
+    margin-right: 5%;
+}
+#market {
+    float: right;
+    margin-right: 5%;
+}
+
+#wrapper{
+    background-color: dimgray;
+    height: -webkit-fill-available;
+
+}
+	p{
+	
+	font-size: medium;
+	background-color: lightgray;
+    border-radius: 10px;
+    text-align: center;
+    height: 25px;
+    display: inline-table;
+    vertical-align: middle;
+    width: -webkit-fill-available;
+    cursor: pointer;
+    float: left;
+    padding: 0px;
+    margin: 1px;
+		cursor: pointer;
+	}
+	p:hover{
+		background-color: coral;
+	}
+	.price {
+	width:30px;
+	}
+	
+	table{
+	    width: 300px;
+    text-align: center;
+}
+table#optionstable {
+    float: right;
+    color: aliceblue;
+	background-color: darkslategray;
+    margin-right: 25px;
+}
+select {
+	border-radius: 5px;
+}
+input {
+    border-radius: 5px;
+}	
+	
+</style>
+</head>
+<body style="text-align: left;">
+<div id="wrapper">
+<div id="status">Status</div>
+
+
+
+
+<select id="items">
+<option value="">Select Menu</option>
+  <option value="modelselector">Model Selector</option>
+ <option value="addcars">Add cars to list</option>
+ <option value="selectchassis">Select Chassis</option>
+ <option value="searchbylot">Search By Lot</option> 
+</select>
+
+
+<table id="optionstable">
+<tbody>
+<tr>
+<td>
+Select IAUC language (recommended: JP)
+</td>
+<td>
+<select id="lang">
+<option value="">Select Language</option>
+  <option value="english">English</option>
+ <option value="japanese">Japanese</option> 
+</select>
+</td>
+</tr>
+
+
+<tr>
+<td>
+Select Market to use
+</td>
+
+
+<td>
+<select id="market" class="market" name="market">
+<option value="">Select Market</option>
+<option value="ao">Africa Online</option>
+<option value="bot">Botswana</option>
+<option value="chi">Chile</option>
+<option value="dom">Dominican</option>
+<option value="jap">Japan Kobe</option>
+<option value="ken">Kenya</option>
+<option value="kenon">Kenya Online</option>
+<option value="mon">Mongolia</option>
+<option value="moz">Mozambique</option>
+<option value="nam">Namibia</option>
+<option value="pak">Pakistan</option>
+<option value="pakon">Pakistan Online</option>
+<option value="sar">South Africa Durban</option>
+<option value="sam">South Africa Messina</option>
+<option value="swa">Swazilan</option>
+<option value="tan">Tanzania</option>
+<option value="thai">Thailand</option>
+<option value="uae">UAE Dubai</option>
+<option value="uk">UK</option>
+<option value="ugan">Uganda</option>
+<option value="zam">Zambia</option>
+</select>
+</td>
+</tr>
+<tr><td>
+<input type="button" value="Copy to" id="copydata" style="float:right; margin-right:10px;">
+</td>
+<td>
+
+<select id="copymarket" class="copymarket" name="copymarket" style="float:right; margin-right:10px;">
+<option value="">Select Market</option>
+<option value="ao">Africa Online</option>
+<option value="bot">Botswana</option>
+<option value="chi">Chile</option>
+<option value="dom">Dominican</option>
+<option value="jap">Japan Kobe</option>
+<option value="ken">Kenya</option>
+<option value="kenon">Kenya Online</option>
+<option value="mon">Mongolia</option>
+<option value="moz">Mozambique</option>
+<option value="nam">Namibia</option>
+<option value="pak">Pakistan</option>
+<option value="pakon">Pakistan Online</option>
+<option value="sar">South Africa Durban</option>
+<option value="sam">South Africa Messina</option>
+<option value="swa">Swazilan</option>
+<option value="tan">Tanzania</option>
+<option value="thai">Thailand</option>
+<option value="uae">UAE Dubai</option>
+<option value="uk">UK</option>
+<option value="ugan">Uganda</option>
+<option value="zam">Zambia</option>
+</select>
+</td>
+</tr>
+</tbody></table>
+	<div id="cont">
+	
+	Select a menu item:
+	</div>
+</div>	
+<script src="script/options.js"></script>
+
+</body>
+</html>

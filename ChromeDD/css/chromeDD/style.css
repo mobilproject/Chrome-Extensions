@@ -1,0 +1,159 @@
+label {
+	float: left;
+}
+#imported {
+	
+	font-size: medium;
+    background-color: darksalmon;
+    border-radius: 10px;
+    text-align: center;
+    height: 25px;
+    display: inline-table;
+    vertical-align: middle;
+    cursor: default;
+    float: left;
+    padding: 0px;
+    margin: 1px;
+    width: -webkit-fill-available;
+}
+th{
+	font-size: large;
+    text-align: center;
+	    background: blanchedalmond;
+}
+td{
+padding:5px;
+}
+#items {
+	float: left;
+	margin:5px;
+}
+#cont {
+
+	margin-top: 30px;
+	display: inline-table;
+	float:left;
+	color: black;
+	width: auto;
+	background-color: lavender;
+	cursor: pointer;
+}
+.button{
+    width: -webkit-fill-available;
+    height: 30px;
+    font-size: large;
+    border-radius: 15px;
+    background-color: goldenrod;
+    border-color: burlywood;
+	cursor:pointer;
+}
+#makers {
+
+	background-color: cadetblue;
+    border-color: cadetblue;
+	display: block;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	width: 200px;
+	height: 500px;
+	
+	margin-top: 0px;
+	
+    border-style: inset;
+	
+}
+
+::-webkit-input-placeholder {
+    color: azure;
+}
+
+#models{
+	
+    font-size: larger;
+	background-color: cadetblue;
+    border-color: cadetblue;
+	display: block;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	width: 200px;
+	height: 500px;
+	
+	margin-top: 0px;
+	
+	border-style: inset;
+	
+}
+#masker{
+    display: inline-block;
+    height: 700px;
+    overflow-x: scroll;
+    border-style: inset;
+}
+#list{
+	font-size: medium;
+	background-color: cadetblue;
+    border-color: cadetblue;
+	display: block;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	width: 200px;
+	height: 500px;
+	
+	margin-top: 0px;
+	
+    border-style: inset;
+	
+}
+#cta{
+	background-color: cadetblue;
+    width: 180px;
+    height: 500px;
+    border-style: inset;
+    font-size: x-large;
+    border-color: burlywood;
+    padding: 5px;
+}
+
+#status{
+    color: cyan;
+    font-size: large;
+    margin: 5px;
+}
+
+#lang {
+    float: right;
+    margin-right: 5%;
+}
+
+#wrapper{
+    background-color: dimgray;
+    height: -webkit-fill-available;
+
+}
+	p{
+	
+	font-size: medium;
+	background-color: lightgray;
+    border-radius: 10px;
+    text-align: center;
+    height: 25px;
+    display: inline-table;
+    vertical-align: middle;
+    width: -webkit-fill-available;
+    cursor: pointer;
+    float: left;
+    padding: 0px;
+    margin: 1px;
+		cursor: pointer;
+	}
+	p:hover{
+		background-color: coral;
+	}
+	.price {
+	width:30px;
+	}
+	
+	table{
+	    width: 300px;
+    text-align: center;
+}
