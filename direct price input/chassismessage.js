@@ -19,8 +19,8 @@ chrome.runtime.onMessage.addListener(
 
 function startLM()
 {
-	var fp = $(".large-input")[0]!=undefined? $(".large-input")[0].value:"";
-	var sp = $(".large-input")[1]!=undefined? $(".large-input")[1].value:"";
+	var fp = $("#tdata1 input").val();
+	var sp = $("#tdata2 input").val();
 	
 	
 	//var chassiscodex = "DA64V-496774";

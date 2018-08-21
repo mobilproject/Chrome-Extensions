@@ -98,9 +98,8 @@ function checkVin(v)
 { 
 	for (var c=0;c<cars.length;c++)
 	{ 
-		if (cars[c]==v)
+		if (v.indexOf(cars[c])==0)
 		{ 
-
 			return true;
 		}
 	}

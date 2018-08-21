@@ -4,7 +4,7 @@
 	"short_name": "All in One tool to make lists with ease",
 	"description": "Collection of all necessary plugins",
 	"options_page": "options.html",
-	"version": "6.2",
+	"version": "7",
 	
   "background": {
     "scripts": ["script/background.js"]
